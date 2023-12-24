@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+        .chat-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-box {
+            width: 300px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .chat-messages {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-box">
+            <textarea name="tampil" class="tampil" cols="30" rows="10" readonly></textarea>
+            <br>
+            <input type="text" class="input">
+            <button class="kirim" onclick="chat()">Kirim</button>
+        </div>
+    </div>
+
+    <script>
+        var input = document.querySelector(".input");
+        var tampil = document.querySelector(".tampil");
+
+        function chat() {
+            tampil.innerHTML = tampil.innerHTML + "Pesan : " + input.value + "\n";
+            input.value = "";
+        }
+    </script>
+</body>
+
+</html>

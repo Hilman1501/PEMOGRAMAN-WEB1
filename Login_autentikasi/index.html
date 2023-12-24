@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+  function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username == "user" && password == "12345") {
+        alert('anda berhasil login')
+        window.location="index.html"
+        return false;
+    }
+    else if(username == "" || password == ""){
+         alert("username / password tidak boleh kosong")
+         return false;
+    }
+    else{
+        alert("Username / Password yang anda inputk");
+    }
+  }
+</script>
+<style>
+  .judul h1{
+    text-align: center;
+  }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      width: 300px;
+      margin: 0 auto;
+    }
+    input {
+      width: 93%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div class="judul">
+    <h1>Form Login</h1>
+  </div>  
+    <form action="" method="post">
+    <label for="">Username</label>
+    <input type="text" name="username" id="username" placeholder="Username">
+    <label for="">Password</label>
+    <input type="password" name="password" id="password" placeholder="Password">
+    <button type="submit" onclick="return login()">Login</button>
+  </form>
+</body>
+
+</html>

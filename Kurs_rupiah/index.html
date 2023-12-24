@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs rupiah</title>
+    <style>
+        table{
+            border: solid black;
+        }
+        
+    </style>
+
+    <script>
+        function kalkulator(){
+            let input = document.getElementById("inputan").value;
+            let mata_uang = document.getElementById("mata_uang").value;
+
+            console.log(input*mata_uang);
+            let area_hasil = document.getElementById("hasil");
+            area_hasil.innerHTML = input*mata_uang
+        }
+    </script>
+</head>
+<body>
+    <h1>Menghitung Kurs Rupiah</h1>
+    <table style="width: 60%;">
+        <tr>
+            <td>Masukan Nilai</td>
+            <td>Mata Uang</td>
+            <td>Nilai Rupiah</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" id="inputan" onchange="kalkulator()"></td>
+
+            <td>
+                <select name="" id="mata_uang" onchange="kalkulator()">
+                    <option value=""></option>
+                    <option value="9915">Dollar Us</option>
+                    <option value="874">Ringgit </option>
+                    <option value="13472">Dollar Singapore</option>
+                    <option value="120">Yen jepang</option>
+                    <option value="3592">Riyal</option>
+                    <option value="15888">Euro</option>
+                </select>
+            </td>
+
+            <td>
+                <p id="hasil"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

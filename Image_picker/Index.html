@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function image_picker(){
+            const list_gambar = ["bison.jpg","singa1.jpg","gozila.jpg","kingkong.jpg","serigala1.jpg"];
+            let pilihan = document.getElementById("option").value;
+
+            if( pilihan =="bison"){
+                let select = list_gambar[0];
+                document.getElementById("gambar").src= `Image/${select}`;
+            }
+            if(pilihan=="singa"){
+                let select = list_gambar[1];
+                document.getElementById("gambar").src= `Image/${select}`;
+            }
+            if(pilihan=="gozila"){
+                let select = list_gambar[2];
+                document.getElementById("gambar").src= `Image/${select}`;
+            }
+            if(pilihan=="gorila"){
+                let select = list_gambar[3];
+                document.getElementById("gambar").src= `Image/${select}`;
+            }
+            if(pilihan=="serigala"){
+                let select = list_gambar[4];
+                document.getElementById("gambar").src= `Image/${select}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="" id="option" onchange="image_picker()">
+        <option value=""></option>
+        <option value="bison">Bison</option>
+        <option value="singa">Singa</option>
+        <option value="gozila">Gozila</option>
+        <option value="gorila">Gorila</option>
+        <option value="serigala">Serigala</option>
+    </select>
+    <br>
+    <br>
+    <div class="container">
+       <center><img id="gambar" width="40%"></center> 
+    </div>
+</body>
+</html>
